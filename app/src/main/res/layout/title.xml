@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/holo_orange_light">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/tid"
+        android:text="盖浇饭"
+        android:textColor="@android:color/white"
+        android:background="#4f4f4f"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"/>
+
+</LinearLayout>

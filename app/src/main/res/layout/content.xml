@@ -1,0 +1,14 @@
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview_id"
+        android:listSelector="@android:color/transparent"
+        android:fadingEdge="@null"
+        android:divider="@null"
+     />
+    </FrameLayout>
