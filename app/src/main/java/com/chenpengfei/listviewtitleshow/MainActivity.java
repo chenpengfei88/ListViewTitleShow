@@ -27,17 +27,6 @@ public class MainActivity extends Activity {
         for(int i = 0; i < expandableListAdapter.getGroupCount(); i++){
             mlist.listview.expandGroup(i);
         }
-        mlist.listview.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
-                System.out.println("==============================ca");
-                cv = v;
-                lf = cv.getLayoutParams();
-                h = cv.getHeight();
-                new RefreshingTask().execute();
-                return false;
-            }
-        });
     }
 
     /**
@@ -57,6 +46,10 @@ public class MainActivity extends Activity {
         childArrayList.add(new Child("韭菜炒鸡蛋盖浇饭"));
         childArrayList.add(new Child("腐竹盖浇饭"));
         parentArrayList.add(parentOne);
+
+        Parent p = new Parent();
+        p.setName("nice");
+        parentArrayList.add(p);
 
         Parent parentTwo= new Parent();
         parentTwo.setName("面");
@@ -93,33 +86,5 @@ public class MainActivity extends Activity {
         return parentArrayList;
     };
 
-    class RefreshingTask extends AsyncTask<Void, Integer, Void> {
-        @Override
-        protected Void doInBackground(Void... params) {
-            while (true) {
-                System.out.println("==============================hahah");
-                h = h -30;
-                if (h <= 0) {
-                    h = 1;
-                    break;
-                }
-                publishProgress(h);
-                try {
-                    Thread.sleep(5);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-            System.out.println("==============================tttt");
-            publishProgress(1);
-            return null;
-        }
-
-        @Override
-        protected void onProgressUpdate(Integer... topMargin) {
-            lf.height = h;
-            cv.setLayoutParams(lf);
-        }
-    }
 
 }

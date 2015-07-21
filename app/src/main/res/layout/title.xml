@@ -15,4 +15,15 @@
         android:gravity="center_vertical"
         android:paddingLeft="10dp"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/tipid"
+        android:text="杠杠的"
+        android:textColor="@android:color/white"
+        android:background="#4f4f4f"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:paddingLeft="10dp"/>
+
 </LinearLayout>
